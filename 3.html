@@ -20,14 +20,25 @@
     ">
     <input type="button" value="night" onclick="
         var target = document.querySelector('body');
+        var a = document.querySelectorAll('a');
+        var a_count = 0;
+
         if(this.value === 'night') {
             target.style.backgroundColor = 'black';
             target.style.color = 'white';
             this.value = 'day';
+            while(a_count < a.length) {
+                a[a_count].style.color = 'powderblue';
+                a_count += 1;
+            }
         } else {
             target.style.backgroundColor = 'white';
             target.style.color = 'black';
             this.value = 'night';
+            while(a_count < a.length) {
+                a[a_count].style.color = 'blue';
+                a_count += 1;
+            }
         }
     ">
     <div id="grid">
